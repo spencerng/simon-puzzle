@@ -9,6 +9,5 @@ for (var i = 0; i < colors.length; i++) {
 	btn.onclick = playSound(colors[i])
 }
 
-var scaleFactor = (window.innerHeight - 300) / 440
-
+var scaleFactor = Math.min(window.innerHeight / 460, window.innerWidth / 460)
 document.getElementsByClassName("gameContainer")[0].style.transform = "scale(" + scaleFactor + ")";
