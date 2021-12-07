@@ -1,0 +1,181 @@
+html, body {
+  height: 100%;
+  margin:  0;
+    background-color: #eeeeee;
+    vertical-align: center;
+    font-family: "Arial";
+  }
+  
+.gameContainer {
+    position:absolute;
+    width:440px;
+    height:440px;
+    margin:0 auto;
+  border: solid 1px black;
+  border-radius: 50%;
+  background-color: black;
+  vertical-align: center;
+  
+  left: 0;
+  right:  0;
+  top:  0;
+  bottom:  0;
+  margin:  auto;
+}
+
+.fourButton {
+    position:absolute;
+    width:190px;
+    height:190px;
+  margin: 20px;
+  
+}
+
+#buttonGre:active {
+  background-color: #0bbf62;
+}
+
+#buttonRed:active {
+  background-color: #e52020;
+}
+
+#buttonBlu:active {
+  background-color: #0091e5;
+}
+
+#buttonYel:active {
+  background-color: #f2d61d;
+}
+
+#buttonGre {
+    top:0;
+    left:0;
+    background-color:#0aa154;
+    border-radius:100% 0 0 0;
+}
+#buttonRed {
+    top:0;
+    right:0;
+    background-color:#c81c1c;
+    border-radius:0 100% 0 0 ;
+}
+#buttonYel {
+    bottom:0;
+    left:0;
+    background-color: #d9be19;
+    border-radius:0 0 0 100%;
+}
+#buttonBlu {
+    bottom:0;
+    right:0;
+    background-color:#0079be;
+    border-radius:0 0 100% 0 ;
+}
+#center {
+  position:absolute;
+  background-color:black;
+  border: 1rem solid black;
+    width:200px;
+    height:200px;
+    top:100px;
+    left:100px;
+    border-radius:50%;
+}
+#simonLogo {
+  margin-top: 3rem;
+  line-height: 90px;
+  width: 100%;
+  text-align: center;
+  user-select: none;
+  pointer-events: none;
+}
+#displayText {
+  opacity: 0.3;
+}
+#startBox {
+  text-align: center;
+  display: relative;
+  margin-left: 40%;
+  margin-top: 1rem;
+  height: 50px;
+  width: 50px;
+}
+#startButton {
+  border: solid 1px black;
+    border-radius: 50%;
+  height: 50%;
+
+  margin: 0px 12.7px 0px 12.7px;
+  background: red;
+  font-size: 20px;
+  line-height: 17px;
+  align-content: center;
+}
+
+#switchBox {
+  text-align: center;
+}
+
+#startText {
+  height: 30%;
+  margin: 4px 6px 0px 6px;
+  font-size: 10px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Arial";
+  user-select: none;
+}
+
+#Switch {
+  background: grey;
+  vertical-align: top;
+  align-content: center;
+  display: inline-block;
+  border: solid 1px black;
+  margin-top: 5px;
+  height: 15px;
+  width: 30px;
+}
+#buttonA {
+  background: red;
+  vertical-align: top;
+  display: inline-block;
+  border-radius: 15%;
+  margin: 1px 0px 0px 0px;
+  height: 10px;
+  width: 12px;
+} 
+
+#AText {
+  vertical-align: top;
+  display: inline-block;
+  height: 40px;
+  line-height: 25px;
+  width: 60px;
+  font-size: 10px;
+  color: white;
+  font-weight: bold;
+  text-align: right;
+}
+#buttonB {
+  background: blue;
+  vertical-align: top;
+  display: inline-block;
+  border-radius: 15%;
+  margin: 1px 0px 0px 0px;
+  height: 10px;
+  width: 12px;
+}
+#BText {
+  vertical-align: top;
+  display: inline-block;
+  text-align: left;
+  height: 40px;
+  line-height: 25px;
+  width: 60px;
+  font-size: 10px;
+  color: white;
+  font-weight: bold;
+
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Simon</title>
+  </head>
+
+  <body>
+    <audio id="soundGre" src="audio/simonSound1.mp3"></audio>
+    <audio id="soundRed" src="audio/simonSound2.mp3"></audio>
+    <audio id="soundYel" src="audio/simonSound3.mp3"></audio>
+    <audio id="soundBlu" src="audio/simonSound4.mp3"></audio>
+    <audio id="soundbuttonWrong" src="audio/simonWrong.mp3"></audio>
+
+    <div class="gameContainer">
+      <div id="buttonGre" class="fourButton"></div>
+      <div id="buttonRed" class="fourButton"></div>
+      <div id="buttonYel" class="fourButton"></div>
+      <div id="buttonBlu" class="fourButton"></div>
+      <div id="center">
+        <img src="img/simon-logo.png" id="simonLogo"/>
+        <div id="startBox">
+          <div id="startButton"></div>
+          <div id="startText">START</div>
+        </div>
+        <div id="switchBox">
+          <div id="AText">A</div>
+          <div id="Switch">
+            <div id="buttonA"></div>
+            <div id="buttonB"></div>
+            </div>
+          <div id="BText">B</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="application/javascript" src="game.js"></script>
+</html>
