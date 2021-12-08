@@ -64,8 +64,6 @@ async function morse(seq) {
 }
 
 async function playSecret() {
-	// MUSK BLVD
-
 	var seq = [
 		"--",
 		"..-",
@@ -79,7 +77,6 @@ async function playSecret() {
 	]
 
 	morse(seq)
-
 }
 
 function getRandomColor() {
@@ -271,10 +268,4 @@ async function init() {
 
 }
 
-
-
 init();
-
-
-
-
