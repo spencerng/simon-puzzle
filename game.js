@@ -109,8 +109,7 @@ function generateSequences(numRounds, start) {
 		round.push(getRandomColor())
 		rounds.push(Array.from(round))
 	}
-	console.log(rounds)
-	console.log(password)
+
 }
 
 async function startGame() {
@@ -133,14 +132,12 @@ async function playWinAnim() {
 }
 
 async function checkGameState() {
-	if (!gameModeA || gameWon || roundNum == -1) {
+	if (gameWon || roundNum == -1) {
 		return;
 	}
 	enableButtons(false)
 
 	var curIdx = currentSequence.length - 1
-	console.log(currentSequence[curIdx])
-	console.log(rounds[roundNum][curIdx])
 
 	if (currentSequence[curIdx] !== rounds[roundNum][curIdx]) {
 		await sleep(500)
@@ -149,7 +146,7 @@ async function checkGameState() {
 		playSequence(rounds[roundNum])
 	} else if (currentSequence.length == rounds[roundNum].length) {
 		// Won this round
-		if (roundNum == rounds.length) {
+		if (roundNum == rounds.length - 1) {
 			await sleep(500)
 			playWinAnim();
 			gameWon = true;
@@ -202,6 +199,7 @@ function resetGame() {
 	gameWon = false;
 	currentSequence = new Array();
 	passwordEntered = false;
+	enableButtons(true)
 
 }
 
@@ -216,7 +214,7 @@ async function init() {
 	var scaleFactor = Math.min(window.innerHeight / 460, window.innerWidth / 460)
 	document.getElementById("gameContainer").style.transform = "scale(" + scaleFactor + ")";
 
-	generateSequences(6, 3)
+	generateSequences(5, 3)
 
 	document.getElementById("modeSwitch").onclick = function () {
 		if (gameModeA) {
@@ -255,11 +253,11 @@ async function init() {
 	}
 
 	document.getElementById("replayButton").onclick = async function () {
-		if (gameOn && roundNum != -1 && gameModeA) {
+		if (gameOn && gameWon && gameModeA) {
+			startGame()
+		} else if (gameOn && roundNum != -1 && gameModeA) {
 			await sleep(500)
 			playSequence(rounds[roundNum]);
-		} else if (gameOn && gameWon && gameModeA) {
-			startGame()
 		} else if (gameOn && !gameModeA) {
 			if (!passwordEntered) {
 				resetGame()	
