@@ -6,6 +6,7 @@ var password = new Array();
 var currentSequence = new Array();
 var gameWon = false
 var passwordEntered = false;
+var playing = false;
 
 var roundNum = -1;
 
@@ -75,8 +76,10 @@ async function playSecret() {
 		"...-",
 		"-.."
 	]
+	playing = true;
 
-	morse(seq)
+	await morse(seq)
+	playing = false;
 }
 
 function getRandomColor() {
@@ -176,6 +179,7 @@ function enableButtons(enable) {
 }
 
 async function playSequence(seq) {
+	playing = true
 	currentSequence = new Array();
 	enableButtons(false);
 
@@ -189,6 +193,7 @@ async function playSequence(seq) {
 	}
 
 	enableButtons(true);
+	playing = false;
 }
 
 function resetGame() {
@@ -252,13 +257,13 @@ async function init() {
 	document.getElementById("replayButton").onclick = async function () {
 		if (gameOn && gameWon && gameModeA) {
 			startGame()
-		} else if (gameOn && roundNum != -1 && gameModeA) {
+		} else if (gameOn && roundNum != -1 && gameModeA && !playing) {
 			await sleep(500)
 			playSequence(rounds[roundNum]);
 		} else if (gameOn && !gameModeA) {
 			if (!passwordEntered) {
 				resetGame()	
-			} else {
+			} else if (!playing) {
 				playSecret();
 			}
 			
