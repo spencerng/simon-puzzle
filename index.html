@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="style.css">
     <title>Simon</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   </head>
 
   <body>
@@ -10,26 +11,46 @@
     <audio id="soundRed" src="audio/simonSound2.mp3"></audio>
     <audio id="soundYel" src="audio/simonSound3.mp3"></audio>
     <audio id="soundBlu" src="audio/simonSound4.mp3"></audio>
-    <audio id="soundbuttonWrong" src="audio/simonWrong.mp3"></audio>
+    <audio id="soundGreLong" src="audio/simonSound1Long.mp3"></audio>
+    <audio id="soundRedLong" src="audio/simonSound2Long.mp3"></audio>
+    <audio id="soundYelLong" src="audio/simonSound3Long.mp3"></audio>
+    <audio id="soundBluLong" src="audio/simonSound4Long.mp3"></audio>
+    <audio id="soundWrong" src="audio/simonWrong.mp3"></audio>
+    <audio id="soundVictory" src="audio/simonWin.wav"></audio>
 
-    <div class="gameContainer">
+    <div id="gameContainer">
       <div id="buttonGre" class="fourButton"></div>
       <div id="buttonRed" class="fourButton"></div>
       <div id="buttonYel" class="fourButton"></div>
       <div id="buttonBlu" class="fourButton"></div>
       <div id="center">
         <img src="img/simon-logo.png" id="simonLogo"/>
-        <div id="startBox">
-          <div id="startButton"></div>
-          <div id="startText">START</div>
+        <div id="buttonBox">
+          <div class="startBox">
+            <div class="circleButton" id="replayButton"></div>
+            <div id="startText">REPLAY</div>
+          </div>
+          <div class="startBox">
+            <div class="circleButton" id="startButton"></div>
+            <div id="startText">START</div>
+          </div>
+          
         </div>
         <div id="switchBox">
-          <div id="AText">A</div>
-          <div id="Switch">
-            <div id="buttonA"></div>
-            <div id="buttonB"></div>
+          <div id="AText" class="buttonText left">GAME A</div>
+          <div class="switch" id="modeSwitch">
+            <div class="slideButton btnLeft" id="modeA"></div>
+            <div class="slideButton btnRight" id="modeB"></div>
             </div>
-          <div id="BText">B</div>
+          <div id="BText" class="buttonText right">GAME B</div>
+        </div>
+        <div id="switchBox">
+          <div id="AText" class="buttonText left">OFF</div>
+          <div class="switch" id="powerSwitch">
+            <div class="slideButton btnLeft" id="off"></div>
+            <div class="slideButton btnRight" id="on"></div>
+            </div>
+          <div id="BText" class="buttonText right">ON</div>
         </div>
       </div>
     </div>

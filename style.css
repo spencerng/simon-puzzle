@@ -7,7 +7,7 @@ html, body {
   
   }
   
-.gameContainer {
+#gameContainer {
     position:absolute;
     width:440px;
     height:440px;
@@ -32,16 +32,33 @@ html, body {
   
 }
 
+#buttonGre.active {
+  background-color: #0bbf62;
+}
+
+
 #buttonGre:active {
   background-color: #0bbf62;
+}
+
+#buttonRed.active {
+  background-color: #e52020;
 }
 
 #buttonRed:active {
   background-color: #e52020;
 }
 
+#buttonBlu.active {
+  background-color: #0091e5;
+}
+
 #buttonBlu:active {
   background-color: #0091e5;
+}
+
+#buttonYel.active {
+  background-color: #f2d61d;
 }
 
 #buttonYel:active {
@@ -51,25 +68,25 @@ html, body {
 #buttonGre {
     top:0;
     left:0;
-    background-color:#0aa154;
+    background-color:#066032;
     border-radius:100% 0 0 0;
 }
 #buttonRed {
     top:0;
     right:0;
-    background-color:#c81c1c;
+    background-color:#861313;
     border-radius:0 100% 0 0 ;
 }
 #buttonYel {
     bottom:0;
     left:0;
-    background-color: #d9be19;
+    background-color: #b5a53f;
     border-radius:0 0 0 100%;
 }
 #buttonBlu {
     bottom:0;
     right:0;
-    background-color:#0079be;
+    background-color:#006199;
     border-radius:0 0 100% 0 ;
 }
 #center {
@@ -93,32 +110,44 @@ html, body {
 #displayText {
   opacity: 0.3;
 }
-#startBox {
+#buttonBox {
+  align-content: center;
+  display:  flex;
   text-align: center;
-  display: relative;
-  margin-left: 40%;
-  margin-top: 1rem;
-  height: 50px;
-  width: 50px;
+  margin-left: 25%;
+  margin-top: 0.75rem;
+  padding-bottom: 0;
 }
-#startButton {
-  border: solid 1px black;
+
+.circleButton:active {
+  background: red;
+}
+
+
+.circleButton {
     border-radius: 50%;
   height: 50%;
-
+  background: #bb000d;
   margin: 0px 12.7px 0px 12.7px;
-  background: red;
   font-size: 20px;
   line-height: 17px;
   align-content: center;
+  display: flex;
+  
 }
+
+.startBox {
+  height: 50px;
+  width: 50px;
+}
+
 
 #switchBox {
   text-align: center;
+  user-select: none;
 }
 
 #startText {
-  height: 30%;
   margin: 4px 6px 0px 6px;
   font-size: 10px;
   color: white;
@@ -128,55 +157,71 @@ html, body {
   user-select: none;
 }
 
-#Switch {
+
+.switch {
   background: grey;
   vertical-align: top;
   align-content: center;
   display: inline-block;
   border: solid 1px black;
   margin-top: 5px;
-  height: 15px;
+  height: 16px;
   width: 30px;
+  border-radius: 3px;
+  user-select:  contain;
 }
 #buttonA {
-  background: red;
+  background: black;
   vertical-align: top;
   display: inline-block;
   border-radius: 15%;
-  margin: 1px 0px 0px 0px;
+  margin: 3px 0px 0px 0px;
   height: 10px;
   width: 12px;
 } 
 
-#AText {
-  vertical-align: top;
+.buttonText {
+  vertical-align: center;
   display: inline-block;
-  height: 40px;
-  line-height: 25px;
+  line-height: 28px;
   width: 60px;
   font-size: 10px;
   color: white;
   font-weight: bold;
+  user-select: none;
+}
+
+.left {
   text-align: right;
 }
-#buttonB {
-  background: blue;
+
+.right {
+  text-align: left;
+}
+
+
+.slideButton {
   vertical-align: top;
   display: inline-block;
   border-radius: 15%;
-  margin: 1px 0px 0px 0px;
+  margin: 3px 0px 0px 0px;
   height: 10px;
   width: 12px;
+  user-select: none;
 }
+
+.btnLeft {
+  background-color: black;
+}
+
 #BText {
   vertical-align: top;
   display: inline-block;
   text-align: left;
-  height: 40px;
-  line-height: 25px;
+  line-height: 28px;
   width: 60px;
   font-size: 10px;
   color: white;
   font-weight: bold;
-
+  user-select: none;
 }
